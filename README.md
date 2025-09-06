@@ -14,3 +14,4 @@ These protocols were not as user-friendly as today’s plug-and-play USB. In the
 
 Looking back, serial and parallel ports were not just connectors; they were the building blocks of digital communication. They taught generations of developers how machines could "talk" to each other, long before USB unified the world of computer peripherals.
 
+
