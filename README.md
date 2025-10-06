@@ -1,6 +1,9 @@
 game developer lux:
 
 
+https://youtu.be/nkS3i728wCA?si=-GcebA4_ytNLEZ1K
+
+
 https://youtu.be/mcWhnVtcGoE?si=zztZw98F0cKaSAKG
 
 
