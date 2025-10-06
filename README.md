@@ -1,9 +1,7 @@
-virtual machines isolator
+game developer lux:
 
 
-https://youtu.be/EUitQ8DaZW8?si=piz1dWWyG5B6Obso
+https://youtu.be/mcWhnVtcGoE?si=zztZw98F0cKaSAKG
 
-
-https://youtu.be/daVUONZqn88?si=QNMrlyHeGdoB-TJR
 
 
