@@ -45,7 +45,7 @@ def world_pos_from_index(ix, iy):
     return wx, wz
 
 def init_gl():
-    glClearColor(1.0, 1.0, 0.6, 1.0)  # 🌟 fundo amarelo
+    glClearColor(1.0, 1.0, 0.1, 1.0)  # 🌟 fundo amarelo
     glEnable(GL_DEPTH_TEST)
     glEnable(GL_NORMALIZE)
     glShadeModel(GL_SMOOTH)
@@ -69,7 +69,7 @@ def draw_grid():
             wz = -half + iy * CELL
             # cor alternada
             if (ix + iy) % 2 == 0:
-                glColor3f(0.85, 0.85, 0.85)  # claro
+                glColor3f(0.85, 0.85, 0.1)  # claro
             else:
                 glColor3f(0.65, 0.65, 0.65)  # escuro
             glVertex3f(wx, 0.0, wz)
