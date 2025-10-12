@@ -2,6 +2,7 @@
 # board3d.py
 # Requisitos: PyOpenGL, PyOpenGL_accelerate, freeglut
 # board3d_bottom.py
+# board3d_bottom.py
 from OpenGL.GL import *
 from OpenGL.GLU import *
 from OpenGL.GLUT import *
@@ -58,19 +59,27 @@ angle = 35.0
 rot = 0.0
 
 def draw_grid():
+    """Desenha o tabuleiro 16x16 tipo xadrez."""
     glDisable(GL_LIGHTING)
-    glColor3f(0.2, 0.2, 0.2)
     half = (GRID_SIZE - 1) * CELL / 2.0
-    glBegin(GL_LINES)
-    for i in range(GRID_SIZE):
-        _, z = world_pos_from_index(0, i)
-        glVertex3f(-half, 0.0, z)
-        glVertex3f(half, 0.0, z)
-        x, _ = world_pos_from_index(i, 0)
-        glVertex3f(x, 0.0, -half)
-        glVertex3f(x, 0.0, half)
+    glBegin(GL_QUADS)
+    for iy in range(GRID_SIZE):
+        for ix in range(GRID_SIZE):
+            wx = -half + ix * CELL
+            wz = -half + iy * CELL
+            # cor alternada
+            if (ix + iy) % 2 == 0:
+                glColor3f(0.85, 0.85, 0.85)  # claro
+            else:
+                glColor3f(0.65, 0.65, 0.65)  # escuro
+            glVertex3f(wx, 0.0, wz)
+            glVertex3f(wx + CELL, 0.0, wz)
+            glVertex3f(wx + CELL, 0.0, wz + CELL)
+            glVertex3f(wx, 0.0, wz + CELL)
     glEnd()
     glEnable(GL_LIGHTING)
+
+
 
 def draw_board_spheres():
     glMaterialfv(GL_FRONT_AND_BACK, GL_SPECULAR, [0.2,0.2,0.2,1.0])
